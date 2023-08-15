@@ -18,9 +18,9 @@ jobs:
        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       
     - name: Build the new release :latest
-      run: docker build -t hamdimb/ci-demoappmb:v2.0 .
+      run: docker build -t ghassem/devopstest:v2.0 .
 
     - name: Push to docker hub :latest
       uses: actions-hub/docker@master
       with:
-       args: push hamdimb/ci-demoappmb:2.0
+       args: push ghassem/devopstest:v2.0
